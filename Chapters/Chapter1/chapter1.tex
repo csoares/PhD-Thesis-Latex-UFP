@@ -1,0 +1,50 @@
+% \pagebreak[4]
+% \hspace*{1cm}
+% \pagebreak[4]
+% \hspace*{1cm}
+% \pagebreak[4]
+
+\chapter{My First Chapter But Note The Numbering ...}
+\graphicspath{{Chapters/Chapter1/Chapter1Figs/PNG/}{Chapters/Chapter1/Chapter1Figs/PDF/}{Chapters/Chapter1/Chapter1Figs/}}
+
+\section{First Paragraph}
+And now I begin my first chapter here ...
+
+Here is an equation\footnote{footnote test}:
+\begin{eqnarray}
+CIF: \hspace*{5mm}F_0^j(a) &=& \frac{1}{2\pi \iota} \oint_{\gamma} \frac{F_0^j(z)}{z - a} dz
+\end{eqnarray}
+
+
+\section{Second Paragraph}
+and here I write more ...\cite{texbook}
+
+\subsection{sub first paragraph}
+... and some more ...
+
+Now I would like to cite the following: \cite{latex} and \cite{texbook}
+and \cite{Rud73}.
+
+I would also like to include a picture ...
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{aflow}
+    \fi
+    \caption{Airfoil Picture}
+    \label{FigAir}
+  \end{center}
+\end{figure}
+
+So as we have now labelled it we can reference it, like so (\ref{FigAir}) and it
+is on Page \pageref{FigAir}. And as we can see, it is a very nice picture and we
+can talk about it all we want and when we are tired we can move on to the next
+chapter ...
+
+I would also like to add an extra bookmark in acroread like so ...
+\ifpdf
+  \pdfbookmark[2]{bookmark text is here}{And this is what I want bookmarked}
+\fi
+

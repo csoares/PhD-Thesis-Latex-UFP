@@ -1,0 +1,72 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2015.12.1)  22 JUN 2016 15:02
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+! Undefined control sequence.
+l.1  \documentclass
+                   [oneside,12pt]{Classes/UFP}
+? 
+! Undefined control sequence.
+l.4 \ifpdf
+          
+? 
+! Extra \fi.
+l.15 \fi
+        
+? 
+! Undefined control sequence.
+l.19 \title
+           {Thesis Template in \LaTeXe for \\ [1ex] % espaçamento
+? 
+! Undefined control sequence.
+l.19 \title{Thesis Template in \LaTeXe
+                                       for \\ [1ex] % espaçamento
+? 
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.21 }
+      
+? 
+Runaway argument?
+ [1ex] Universidade Fernando Pessoa 
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.21 }
+      
+? 
+! Undefined control sequence.
+l.23 \ifpdf
+           
+? 
+! Undefined control sequence.
+l.24   \author
+              {\href{mailto:csoares@ufp.edu.pt}{Christophe Soares}}
+? 
+! Undefined control sequence.
+l.24   \author{\href
+                    {mailto:csoares@ufp.edu.pt}{Christophe Soares}}
+? 
+! Undefined control sequence.
+l.25   \collegeordept
+                     {\href{http://fct.ufp.pt/t}{Faculdade de Ciências e Te...
+
+? 
+! Undefined control sequence.
+l.25   \collegeordept{\href
+                           {http://fct.ufp.pt/t}{Faculdade de Ciências e Te...
+
+? 
+! Emergency stop.
+l.25   \collegeordept{\href
+                           {http://fct.ufp.pt/t}{Faculdade de Ciências e Te...
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

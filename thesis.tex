@@ -1,0 +1,98 @@
+ \documentclass[oneside,12pt]{Classes/UFP}
+
+%% Defina as propriedades do PDF gerado
+\ifpdf
+    \pdfinfo { /Title  (UFP THESIS)
+               /Creator (TeX)
+               /Producer (pdfTeX)
+               /Author (Christophe Soares csoares@ufp.edu.pt)
+               /CreationDate (D:20120101000000)  %format D:YYYYMMDDhhmmss
+               /ModDate (D:20121101120000)
+               /Subject (Como escrever uma tese em LaTeX)
+               /Keywords (PhD, Thesis)}
+    \pdfcatalog { /PageMode (/UseOutlines)
+                  /OpenAction (fitbh)  }
+\fi
+
+% Titulo
+
+\title{Thesis Template in \LaTeXe for \\ [1ex] % espaçamento
+	Universidade Fernando Pessoa
+}
+
+\ifpdf
+  \author{\href{mailto:csoares@ufp.edu.pt}{Christophe Soares}}
+  \collegeordept{\href{http://fct.ufp.pt/t}{Faculdade de Ciências e Tecnologia}}
+  \university{\href{http://www.ufp.pt}{Universidade Fernando Pessoa}}
+% insert below the file name that contains the crest in-place of 'UnivShield'
+  \crest{\includegraphics[width=25mm]{UFP}}
+\fi
+
+\degree{Doctor of Philosophy / Master of Science}
+\degreedate{Date to be defined}
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+% Put all the style files you want in the directory StyleFiles and usepackage like this:
+\usepackage{StyleFiles/watermark}
+
+% espaçamento de um e meio entre linhas
+\onehalfspacing
+
+\begin{document}
+
+% defina a lingua do documento
+%\language{english}
+
+
+% Documento em fase de edição (comentar ou descomentar consoante precisar
+\watermark{DRAFT COPY ONLY}
+
+
+\maketitle
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\frontmatter % book mode only
+\pagenumbering{roman}
+
+% empty page
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\include{Chapters/Abstract/abstract}
+\include{Chapters/Dedication/dedication}
+\include{Chapters/Acknowledgement/acknowledgement}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\printnomenclature  %% Print the nomenclature
+\addcontentsline{toc}{chapter}{Nomenclature}
+
+\mainmatter % book mode only
+\include{Chapters/Introduction/introduction}
+\include{Chapters/Chapter1/chapter1}
+\include{Chapters/Chapter2/chapter2}
+\include{Chapters/Chapter3/chapter3}
+\include{Chapters/Conclusions/conclusions}
+
+\backmatter % book mode only
+\appendix
+\include{Chapters/Appendix/Appendix1/appendix1}
+\include{Chapters/Appendix/Appendix2/appendix2}
+
+%escolha um dos 3 estilos de bibliografia
+\bibliographystyle{plainnat}
+%\bibliographystyle{Classes/UFPbib}
+%\bibliographystyle{Classes/jmb} % bibliography style
+
+\renewcommand{\bibname}{References} 	% personalizar o nome da secção das referências bibliográficas
+\bibliography{References/references} 		% Caminho para o bibtex
+
+\end{document}
